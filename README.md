@@ -10,23 +10,6 @@ A simple package to create bots in discord
 
 discord-c is a very simple bot creation API, if you want something very simple, like just responding to messages or commands, this API is for you
 
-
-  
-### Example
-
-```javascript
-  const { Bot } = require('discord-c');
-
-  bot.onmessage((ctx) => {
-      ctx.channel.send(ctx.author.mention, 'hi');
-  });
-
-  bot.start('token', () => {
-      console.log('started');
-  });
-```
-  
-
 ## Examples
 
 Basic starts
@@ -81,7 +64,7 @@ com.command('hi', (ctx) => {
 module.exports = bot;
 ```
 
-### IN OTHER FILE
+#### IN OTHER FILE
 
 ```javascript
 const { Bot } = require('discord-c');
