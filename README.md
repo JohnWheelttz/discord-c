@@ -6,13 +6,12 @@
 A simple package to create bots in discord
 
 
-## Description
+# Description
 
 discord-c is a very simple bot creation API, if you want something very simple, like just responding to messages or commands, this API is for you
 
-## Examples
 
-Basic starts
+## Basic starts
 
 ```javascript
 const { Bot } = require('discord-c');
@@ -32,50 +31,51 @@ bot.start('token', () => {
 });
 ```
 
-### Commands
+# Commands
 
-Default prefix is $
+- ## Basic
 
-```javascript
-bot.command('ping', (ctx) => {
-    ctx.channel.send('PONG!');
-});
+    Default prefix is $
 
-bot.command('hi', (ctx) => {
-    ctx.channel.send('Hello .-.');
-});
-```
+    ```javascript
+    bot.command('ping', (ctx) => {
+        ctx.channel.send('PONG!');
+    });
 
-### Module commands
+    bot.command('hi', (ctx) => {
+        ctx.channel.send('Hello .-.');
+    });
+    ```
 
-```javascript
-const { Bot } = require('discord-c');
+- ## Module commands
 
-const com = new Bot.Commands();
+    ```javascript
+    const { Bot } = require('discord-c');
 
-com.command('ping', (ctx) => {
-    ctx.channel.send('PONG!');
-});
+    const com = new Bot.Commands();
 
-com.command('hi', (ctx) => {
-    ctx.channel.send('Hello .-.');
-});
+    com.command('ping', (ctx) => {
+        ctx.channel.send('PONG!');
+    });
 
-module.exports = bot;
-```
+    com.command('hi', (ctx) => {
+        ctx.channel.send('Hello .-.');
+    });
 
-#### IN OTHER FILE
+    module.exports = bot;
+    ```
+    In other file
 
-```javascript
-const { Bot } = require('discord-c');
-const commands = require('./commands');
+    ```javascript
+    const { Bot } = require('discord-c');
+    const commands = require('./commands');
 
-const bot = new Bot();
+    const bot = new Bot();
 
-bot.commandsUse(commands);
-````
+    bot.commandsUse(commands);
+    ````
 
-### Reference
+# Reference
 - Basic functions
   | Instance | Functions     | Description                |
   | :-------- | :------- | :------------------------- |
@@ -99,5 +99,3 @@ bot.commandsUse(commands);
 
  - [NPM](https://www.npmjs.com/package/discord-c)
  - [Github](https://github.com/JohnWheelttz/discord-c)
-
-  
